@@ -1,0 +1,1 @@
+baffle() and ping() will begin calling eachother endlessly. Eventually, this will cause a stack overflow error.
