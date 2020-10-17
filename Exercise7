@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+class DungeonDice {
+
+    public static void main (String[] args) {
+        //1. declare variables
+        Scanner sc = new Scanner(System.in);
+        //... other variables go here
+        int numdice=0; //number of dice thrown
+        int dieroll=0;
+        int diceside=0;
+        int t=0;//total
+        
+        String ans="y";
+        
+        while(ans.equals("y")){
+           
+           System.out.println("How many dice would you like to roll?"); 
+           numdice=sc.nextInt();
+           System.out.println("How many sides would you like your dice to have?");
+           diceside=sc.nextInt();
+           System.out.println("");
+           System.out.print("You rolled ");
+           
+           
+           for (int i=0; i<numdice; i++){
+               dieroll= rollDie(diceside);
+               t=t+dieroll;
+               System.out.print(dieroll +" ");
+            }
+            
+            System.out.println("");
+            System.out.println("Total: " + t);
+            
+            System.out.println("Play again? [y,n]");
+            ans=sc.next();
+        }
+     
+    }
+    public static int rollDie(int s){
+        return (int) (Math.random()*s)+1;
+    }
+}
