@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+class displayBox {
+
+    public static void main (String[] args) {
+        //1. declare variables
+        Scanner sc = new Scanner(System.in);
+        //... other variables go here
+        
+        //2. get user input
+        System.out.println("Let's make a box!");
+        displayBox(4,8);
+       
+    }
+    
+    public static void displayBox(int height,int width){
+        for (int i=0; i<height; i++){
+            for (int j=0; j<width; j++){
+                System.out.print("$");
+            }
+            System.out.println("");
+        }
+    }
+}
